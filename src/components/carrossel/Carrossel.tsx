@@ -38,11 +38,11 @@ function Carrossel() {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <img src="https://img.freepik.com/fotos-gratis/bela-praia-tropical-mar-e-mar-com-palmeira-de-coco-na-hora-do-nascer-do-sol_74190-7454.jpg" alt="Imagem" />
+                    <img src="https://i.imgur.com/KRLGnJt.png" alt="Imagem" referrerPolicy="no-referrer"/>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <img src="https://i.imgur.com/RxL2yjz.jpg" alt="Imagem" />
+                    <img src="https://i.imgur.com/RxL2yjz.jpg" alt="Imagem" referrerPolicy="no-referrer"/>
                 </SwiperSlide>
 
             </Swiper>
