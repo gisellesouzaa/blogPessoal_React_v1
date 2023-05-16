@@ -1,49 +1,37 @@
-import React from "react";
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
-import {Box} from '@mui/material';
+import React from 'react';
+import BotaoMenu from './BotaoMenu/BotaoMenu';
+import { IconButton, Toolbar, makeStyles, AppBar, Typography } from '@material-ui/core';
 
-function Navbar() {
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        flexGrow: 1,
+    },
+    menuButton: {
+        marginRight: theme.spacing(3),
+    },
+    title: {
+        flexGrow: 1,
+    },
+}));
+
+export default function ButtonAppBar() {
+    const classes = useStyles();
+
     return (
-        <>
+        <div className={classes.root}>
             <AppBar position="static">
-                <Toolbar variant="dense">
-                    <Box style={{ cursor: "pointer" }} >
-                        <Typography variant="h5" color="inherit">
-                            BlogPessoal
-                        </Typography>
-                    </Box>
+                <Toolbar>
+                    <Typography variant="h6" className={classes.title}>
+                        <img src="src\images\fivicon\REAL LOVE VETOR final editavel corel.png" alt="logo" height="90rem"/>
+                    </Typography>
 
-                    <Box display="flex" justifyContent="start">
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                home
-                            </Typography>
-                        </Box>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                postagens
-                            </Typography>
-                        </Box>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                temas
-                            </Typography>
-                        </Box>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                cadastrar tema
-                            </Typography>
-                        </Box>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                logout
-                            </Typography>
-                        </Box>
-                    </Box>
+                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                        <BotaoMenu />
+                    </IconButton>
+                    
                 </Toolbar>
             </AppBar>
-        </>
-    )
+        </div>
+    );
 }
-
-export default Navbar;
