@@ -29,12 +29,20 @@ export default function BotaoMenu() {
                 onClose={handleClose}
             >
                 <Link to="/home" >
-                    <MenuItem className="text-decorator-none" onClick={handleClose}>Home</MenuItem>
+                    <MenuItem onClick={handleClose}>Home</MenuItem>
+                </Link>
+
+                <Link to="/sobre" >
+                    <MenuItem onClick={handleClose}>Sobre</MenuItem>
                 </Link>
 
                 <MenuItem onClick={handleClose}>Postagens</MenuItem>
                 <MenuItem onClick={handleClose}>Temas</MenuItem>
                 <MenuItem onClick={handleClose}>Usuários</MenuItem>
+
+                <Link to="/videos" >
+                    <MenuItem onClick={handleClose}>Vídeos</MenuItem>
+                </Link>
 
                 <Link to="/login">
                     <MenuItem onClick={handleClose}>Sair</MenuItem>

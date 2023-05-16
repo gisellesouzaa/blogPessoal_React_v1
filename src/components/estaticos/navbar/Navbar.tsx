@@ -1,5 +1,5 @@
 import React from 'react';
-import BotaoMenu from './BotaoMenu/BotaoMenu';
+import BotaoMenu from '../../botaoMenu/BotaoMenu';
 import { IconButton, Toolbar, makeStyles, AppBar, Typography } from '@material-ui/core';
 
 
@@ -20,8 +20,8 @@ export default function ButtonAppBar() {
 
     return (
         <div className={classes.root}>
-            <AppBar position="static">
-                <Toolbar>
+            <AppBar position="static" >
+                <Toolbar >
                     <Typography variant="h6" className={classes.title}>
                         <img src="src\images\fivicon\REAL LOVE VETOR final editavel corel.png" alt="logo" height="90rem"/>
                     </Typography>
