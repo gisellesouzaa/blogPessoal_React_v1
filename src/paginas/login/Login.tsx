@@ -1,4 +1,5 @@
 import React from 'react';
+import BotaoMenu from '../../botaoMenu/BotaoMenu';
 
 function Login(){
     return(

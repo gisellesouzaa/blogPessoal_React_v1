@@ -1,0 +1,28 @@
+.boxNav {
+    align-items: center;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.itemMenu {
+    color: var(--color-areia);
+    text-align: center;
+    text-transform: uppercase;
+	font-size: 1.5rem;
+	font-family: 'Pathway Gothic One', sans-serif;
+    letter-spacing: 1px;
+    min-width: 90px;
+}
+
+.itemMenu:hover {
+    color: var(--color-dark) ;
+}
+
+.logo_principal {
+    height: 100px;
+}
+
+
+
+
+

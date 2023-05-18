@@ -1,5 +1,8 @@
+@import url(http://fonts.googleapis.com/css?family=Pathway+Gothic+One);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+
 :root {
-  --color-light-green: #790094;
+  --color-light-green: #rgb(0, 255, 204);
   --color-contrast-blue: #caf0f8;
   --color-light-blue: #04d9ff;
   --color-dark-blue: #036dab;
@@ -21,14 +24,18 @@
   /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, */
 }
 
+body {
+  background: url(../src/images/bg_body.jpg) center 0 no-repeat var(--color-contrast-blue);
+}
+
 a {
   color: inherit;
   text-decoration: none;
   color: #0070f3;
 }
 
-a:hover {
-  color: rgb(0, 255, 204);
+ul {
+	list-style: none;
 }
 
 @media (max-width: 600px) {

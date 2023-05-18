@@ -1,37 +1,54 @@
 import React from 'react';
-import BotaoMenu from '../../botaoMenu/BotaoMenu';
-import { IconButton, Toolbar, makeStyles, AppBar, Typography } from '@material-ui/core';
+import './Navbar.css'
+import { Box, Typography } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-    },
-    menuButton: {
-        marginRight: theme.spacing(3),
-    },
-    title: {
-        flexGrow: 1,
-    },
-}));
-
-export default function Navbar() {
-    const classes = useStyles();
-
+function Navbar() {
     return (
-        <div className={classes.root}>
-            <AppBar position="static" >
-                <Toolbar >
-                    <Typography variant="h6" className={classes.title}>
-                        <img src="src\images\fivicon\REAL LOVE VETOR final editavel corel.png" alt="logo" height="90rem"/>
-                    </Typography>
+        <>
+            <Box display="flex" justifyContent="center" className='boxNav'>
+                <Link to="/home">
+                    <Box className="itemMenu" mx={1} style={{ cursor: "pointer" }}>
+                        <p>home</p>
+                    </Box>
+                </Link>
 
-                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                        <BotaoMenu />
-                    </IconButton>
-                    
-                </Toolbar>
-            </AppBar>
-        </div>
-    );
+                <Link to="/sobre">
+                    <Box className="itemMenu" mx={1} style={{ cursor: "pointer" }}>
+                        <p>sobre</p>
+                    </Box>
+                </Link>
+
+                <Link to="/galeria">
+                    <Box className="itemMenu" mx={1} style={{ cursor: "pointer" }}>
+                        <p>galeria</p>
+                    </Box>
+                </Link>
+
+                <Box mx={1} style={{ cursor: "pointer" }}>
+                    <img className="logo_principal" src="src\images\logo_vetor.png" alt="" />
+                </Box>
+
+                <Link to="/postagens">
+                    <Box className="itemMenu" mx={1} style={{ cursor: "pointer" }}>
+                        <p>postagens</p>
+                    </Box>
+                </Link>
+
+                <Link to="/temas">
+                    <Box className="itemMenu" mx={1} style={{ cursor: "pointer" }}>
+                        <p>temas</p>
+                    </Box>
+                </Link>
+
+                <Link to="/usuarios">
+                    <Box className="itemMenu" mx={1} style={{ cursor: "pointer" }}>
+                        <p>usuarios</p>
+                    </Box>
+                </Link>
+            </Box >
+        </>
+    )
 }
+
+export default Navbar;
