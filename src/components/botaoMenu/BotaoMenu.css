@@ -1,17 +1,5 @@
 
-:root {
-    --color-primary-one: #04d9ff;
-    --color-primary-two: #036dab;
-    --color-second-one: #790094;
-    --color-second-two: #4f0071;
-    --color-bg-dark: #000a1a;
-    --color-contrast: #caf0f8;
-    
-    --font-primary: "Baloo Da 2", serif;
-    --font-subtitle: 'Audiowide', cursive;
-    --font-text: 'Electrolize', sans-serif;
-    --font-action: "Muli", serif;
-}
+
 
 .btnMenu {
     font-weight: bold;

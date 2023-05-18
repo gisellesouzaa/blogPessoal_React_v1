@@ -3,8 +3,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Navbar from './components/estaticos/navbar/Navbar';
 import Home from './paginas/home/Home';
-import Sobre from './paginas/sobre/sobre';
-import Videos from './paginas/videos/videos';
+import Sobre from './paginas/sobre/Sobre';
+import Postagens from './paginas/postagens/Postagens';
+import Temas from './paginas/temas/Temas';
+import Usuarios from './paginas/usuarios/Usuarios';
+import Videos from './paginas/videos/Videos';
 import Footer from './components/estaticos/footer/Footer';
 import Login from './paginas/login/Login';
 import './App.css'
@@ -18,6 +21,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/sobre" element={<Sobre />} />
+            <Route path="/postagens" element={<Postagens />} />
+            <Route path="/temas" element={<Temas />} />
+            <Route path="/usuarios" element={<Usuarios />} />
             <Route path="/videos" element={<Videos />} />
             <Route path="/login" element={<Login />} />
           </Routes>

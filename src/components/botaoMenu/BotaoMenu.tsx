@@ -36,9 +36,17 @@ export default function BotaoMenu() {
                     <MenuItem onClick={handleClose}>Sobre</MenuItem>
                 </Link>
 
-                <MenuItem onClick={handleClose}>Postagens</MenuItem>
-                <MenuItem onClick={handleClose}>Temas</MenuItem>
-                <MenuItem onClick={handleClose}>Usuários</MenuItem>
+                <Link to="/postagens" >
+                    <MenuItem onClick={handleClose}>Postagens</MenuItem>
+                </Link>
+
+                <Link to="/temas" >
+                    <MenuItem onClick={handleClose}>Temas</MenuItem>
+                </Link>
+
+                <Link to="/usuarios" >
+                    <MenuItem onClick={handleClose}>Usuários</MenuItem>
+                </Link>
 
                 <Link to="/videos" >
                     <MenuItem onClick={handleClose}>Vídeos</MenuItem>
