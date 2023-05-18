@@ -1,0 +1,20 @@
+.box1 {
+    background-color: var(--color-contrast-blue);
+    padding: 10px;
+    color: var(--color-dark);
+}
+
+.box2 {
+    background-color: var(--color-dark);
+    height: 60px;
+
+}
+
+.redes {
+    font-size: 2rem !important;
+    color: var(--color-dark);
+}
+
+.textos {
+    color: var(--color-areia)
+}

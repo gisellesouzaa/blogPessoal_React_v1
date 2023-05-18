@@ -11,6 +11,7 @@ import Galeria from './paginas/galeria/Galeria';
 import Footer from './components/estaticos/footer/Footer';
 import Login from './paginas/login/Login';
 import './App.css'
+import CadastroUsuario from './paginas/cadastroUsuario/cadastroUsuario';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/usuarios" element={<Usuarios />} />
             <Route path="/galeria" element={<Galeria />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/cadastrousuario" element={<CadastroUsuario />} />
           </Routes>
           <Footer />
         </BrowserRouter>

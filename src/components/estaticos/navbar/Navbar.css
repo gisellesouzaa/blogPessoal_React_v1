@@ -12,6 +12,7 @@
 	font-family: 'Pathway Gothic One', sans-serif;
     letter-spacing: 1px;
     min-width: 90px;
+    cursor: "pointer"
 }
 
 .itemMenu:hover {
