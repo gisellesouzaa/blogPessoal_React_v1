@@ -35,7 +35,7 @@ function Login() {
         }
     }, [token])
 
-    async function onSubmit(e: ChangeEvent<HTMLInputElement>) {
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
         try {
             await login(`/usuarios/logar`, userLogin, setToken)

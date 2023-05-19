@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import "./Carrossel.css";
+import { Link } from "react-router-dom";
 
 function Carrossel() {
     return (
@@ -18,7 +19,7 @@ function Carrossel() {
                 spaceBetween={30}
                 loop={true}
                 autoplay={{
-                    delay: 3000,
+                    delay: 10000,
                     disableOnInteraction: false,
                 }}
                 pagination={{
@@ -30,19 +31,19 @@ function Carrossel() {
             >
 
                 <SwiperSlide>
-                    <img src="https://img.freepik.com/fotos-gratis/bela-praia-tropical-mar-e-mar-com-palmeira-de-coco-na-hora-do-nascer-do-sol_74190-7454.jpg" alt="Imagem" />
+                    <Link to="/sobre">
+                        <img src="src\images\imgsobre.png" alt="Imagem" />
+                    </Link>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <img src="https://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png" alt="Imagem" />
+                    <Link to="/galeria">
+                        <img src="src\images\imgalbum.png" alt="Imagem" />
+                    </Link>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <img src="https://i.imgur.com/KRLGnJt.png" alt="Imagem" referrerPolicy="no-referrer"/>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <img src="https://i.imgur.com/RxL2yjz.jpg" alt="Imagem" referrerPolicy="no-referrer"/>
+                    <img src="src\images\imglogo.png" alt="Imagem" referrerPolicy="no-referrer" />
                 </SwiperSlide>
 
             </Swiper>

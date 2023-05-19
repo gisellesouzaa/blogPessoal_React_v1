@@ -30,7 +30,7 @@ function Navbar() {
                     <img className="logo_principal" src="src\images\logo_vetor.png" alt="" />
                 </Box>
 
-                <Link to="/postagens">
+                <Link to="/post">
                     <Box className="itemMenu" mx={1} >
                         <p>postagens</p>
                     </Box>
