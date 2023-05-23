@@ -42,7 +42,7 @@ function Navbar() {
                     <img className="logo_principal" src="src\images\logo_vetor.png" alt="" />
                 </Box>
 
-                <Link to="/post">
+                <Link to="/posts">
                     <Box className="itemMenu" mx={1} >
                         <p>postagens</p>
                     </Box>
