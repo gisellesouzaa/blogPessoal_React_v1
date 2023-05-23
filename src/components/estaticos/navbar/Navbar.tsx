@@ -3,8 +3,20 @@ import './Navbar.css'
 import { Box, Typography } from '@material-ui/core';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import useLocalStorage from 'react-use-localstorage';
+
 
 function Navbar() {
+    const [token, setToken] = useLocalStorage('token')
+    let navigate = useNavigate();
+    
+    function goLogout(){
+        setToken('')
+        alert('Usuário deslogado')
+        navigate('/login')
+    }
+    
     return (
         <>
             <Box display="flex" justifyContent="center" className='boxNav'>
@@ -48,11 +60,9 @@ function Navbar() {
                     </Box>
                 </Link>
 
-                <Link to="/login">
-                <Box className="itemMenu" mx={1} >
+                <Box className="itemMenu" mx={1}  onClick={goLogout}>
                     <LogoutIcon/>
                 </Box>
-                </Link>
             </Box >
         </>
     )

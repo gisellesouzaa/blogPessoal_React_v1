@@ -45,7 +45,7 @@ function ListaPostagem() {
                                     Postagens
                                 </Typography>
                                 <Typography variant="h5" component="h2">
-                                    <img src={`${post.foto}`} alt="" /> 
+                                    <img src={`${post.foto}`} alt="imagem do post" className='imagempost' /> 
                                 </Typography>
                                 <Typography variant="h5" component="h2">
                                     {post.titulo}
@@ -60,14 +60,14 @@ function ListaPostagem() {
                             <CardActions>
                                 <Box display="flex" justifyContent="center" mb={1.5}>
 
-                                    <Link to="" className="text-decorator-none" >
+                                    <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >
                                         <Box mx={1}>
                                             <Button variant="contained" className="marginLeft" size='small' color="primary" >
                                                 atualizar
                                             </Button>
                                         </Box>
                                     </Link>
-                                    <Link to="" className="text-decorator-none">
+                                    <Link to={`/deletarPostagem/${post.id}`} className="text-decorator-none">
                                         <Box mx={1}>
                                             <Button variant="contained" size='small' color="secondary">
                                                 deletar
