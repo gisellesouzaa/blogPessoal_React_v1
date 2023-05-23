@@ -8,7 +8,7 @@ import Postagem from '../../../models/Postagem';
 import { busca, buscaId, post, put } from '../../../services/Service';
 
 function CadastroPost() {
- 
+
     return (
         <Container maxWidth="sm" className="topo">
             <form >
