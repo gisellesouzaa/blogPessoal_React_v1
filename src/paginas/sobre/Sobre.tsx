@@ -1,9 +1,12 @@
+import { Box } from '@material-ui/core';
 import React from 'react';
 
 function Sobre(){
     return(
         <>
-            <h1>Página de Sobre</h1>
+        <Box marginLeft={20} alignContent={'center'} alignItems={'center'} justifyContent={'center'}>
+            <img src='src\images\imgsobre.png'/>
+        </Box>
         </>
     )
 }

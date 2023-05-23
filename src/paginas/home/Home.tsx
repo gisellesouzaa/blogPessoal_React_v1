@@ -14,11 +14,6 @@ function Home() {
                 </Grid>
             </Grid>
             <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
-                <Grid alignItems="center" item xs={12} style={{ marginTop: "8px" }}>
-                    <Box display="flex" justifyContent="center" paddingBottom={"1rem"}>
-                        <Button variant="outlined" className='botao'>Ver Postagens</Button>
-                    </Box>
-                </Grid>
                 <Grid item xs={12} className='postagens'>
                     <TabPostagem />
                 </Grid>

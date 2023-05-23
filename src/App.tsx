@@ -8,10 +8,11 @@ import Usuarios from './paginas/usuarios/Usuarios';
 import Galeria from './paginas/galeria/Galeria';
 import Footer from './components/estaticos/footer/Footer';
 import Login from './paginas/login/Login';
-import './App.css'
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
-import ListaPostagem from './components/postagens/listapostagem/listapostagem';
-import ListaTema from './components/temas/listatema/listatema';
+import ListaPostagem from './components/postagens/listapostagem/ListaPostagem';
+import ListaTema from './components/temas/listatema/ListaTema';
+import './App.css'
+
 
 function App() {
   return (
