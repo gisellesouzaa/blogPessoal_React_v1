@@ -45,7 +45,7 @@ function ListaPostagem() {
                                     Postagens
                                 </Typography>
                                 <Typography variant="h5" component="h2">
-                                    <img src={`${post.foto}`} alt="imagem do post" className='imagempost' /> 
+                                    <img src={`${post.foto}`} alt="" className='imagempost' /> 
                                 </Typography>
                                 <Typography variant="h5" component="h2">
                                     {post.titulo}
