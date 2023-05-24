@@ -5,7 +5,6 @@ import { buscaId, post, put } from '../../../services/Service';
 import { useNavigate, useParams } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 
-
 function CadastroTema() {
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
@@ -51,7 +50,7 @@ function CadastroTema() {
         console.log("tema " + JSON.stringify(tema))
 
         if (id !== undefined) {
-            console.log(tema)
+            // console.log(tema)
             put(`/temas`, tema, setTema, {
                 headers: {
                     'Authorization': token

@@ -4,7 +4,8 @@ interface Postagem{
     id: number;
     titulo: string;
     texto: string;
-    foto: string;
+    data: string;
+    foto?: string | null;
     tema?: Tema | null
 }
 

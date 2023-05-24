@@ -8,7 +8,7 @@ function Galeria() {
         <>
             <Grid container rowSpacing={8} columnSpacing={{ xs: 1, sm: 2, md: 3 }} padding={8} justifyContent="center" alignItems="center">
 
-            {/* <Grid className='border' item xs={6} alignItems={'center'} justifyContent={'center'}>
+            <Grid className='border' item xs={12} md={6} xl={6} sm={6} lg={6} alignItems={'center'} justifyContent={'center'}>
                     <Card sx={{ maxWidth: 580 }} >
                         <CardActionArea className='cardVideo'>
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/7geKgcC1Eg8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -23,9 +23,9 @@ function Galeria() {
                             </Typography>
                         </CardContent>
                     </Card>
-                </Grid> */}
+                </Grid>
 
-                <Grid className='border' item xs={6} alignItems={'center'} justifyContent={'center'}>
+                <Grid className='border' item  xs={12} md={6} xl={6} sm={6} lg={6} alignItems={'center'} justifyContent={'center'}>
                     <Card sx={{ maxWidth: 560 }} >
                         <CardActionArea className='cardVideo'>
                             <video  width="560" height="315" controls>
