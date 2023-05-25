@@ -17,6 +17,8 @@ import DeletarTema from './components/temas/deletarTema/DeletarTema';
 import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
 import { MuiThemeProvider, createTheme } from '@material-ui/core/styles';
 import './App.css'
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 function App() {
   const THEME = createTheme({
@@ -39,30 +41,31 @@ function App() {
   return (
     <>
       <MuiThemeProvider theme={THEME}>
+        <Provider store={store}>
+          <BrowserRouter>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/sobre" element={<Sobre />} />
+              <Route path="/posts" element={<ListaPostagem />} />
+              <Route path="/temas" element={<ListaTema />} />
+              <Route path="/usuarios" element={<Usuarios />} />
+              <Route path="/galeria" element={<Galeria />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/cadastro" element={<CadastroUsuario />} />
 
-        <BrowserRouter>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/sobre" element={<Sobre />} />
-            <Route path="/posts" element={<ListaPostagem />} />
-            <Route path="/temas" element={<ListaTema />} />
-            <Route path="/usuarios" element={<Usuarios />} />
-            <Route path="/galeria" element={<Galeria />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/cadastro" element={<CadastroUsuario />} />
+              <Route path="/formularioPostagem" element={<CadastroPost />} />
+              <Route path="/formularioPostagem/:id" element={<CadastroPost />} />
+              <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
 
-            <Route path="/formularioPostagem" element={<CadastroPost />} />
-            <Route path="/formularioPostagem/:id" element={<CadastroPost />} />
-            <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
-
-            <Route path="/formularioTema" element={<CadastroTema />} />
-            <Route path="/formularioTema/:id" element={<CadastroTema />} />
-            <Route path="/deletarTema/:id" element={<DeletarTema />} />
-          </Routes>
-          <Footer />
-        </BrowserRouter>
+              <Route path="/formularioTema" element={<CadastroTema />} />
+              <Route path="/formularioTema/:id" element={<CadastroTema />} />
+              <Route path="/deletarTema/:id" element={<DeletarTema />} />
+            </Routes>
+            <Footer />
+          </BrowserRouter>
+        </Provider>
       </MuiThemeProvider>
     </>
   )
