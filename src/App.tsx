@@ -19,6 +19,8 @@ import { MuiThemeProvider, createTheme } from '@material-ui/core/styles';
 import './App.css'
 import { Provider } from 'react-redux';
 import store from './store/store';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const THEME = createTheme({
@@ -42,6 +44,7 @@ function App() {
     <>
       <MuiThemeProvider theme={THEME}>
         <Provider store={store}>
+          <ToastContainer/>
           <BrowserRouter>
             <Navbar />
             <Routes>

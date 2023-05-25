@@ -6,6 +6,7 @@ import useLocalStorage from 'react-use-localstorage';
 import { login } from '../../services/Service';
 import './Login.css';
 import UserLogin from '../../models/UserLogin';
+import { toast } from 'react-toastify';
 
 function Login3() {
 
@@ -40,9 +41,29 @@ function Login3() {
         e.preventDefault();
         try {
             await login(`/usuarios/logar`, userLogin, setToken)
-            alert('Usuário logado com sucesso!')
+            // alert('Usuário logado com sucesso!')
+            toast.success('Usuário logado com sucesso!', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
         } catch (error) {
-            alert('Dados do usuário inconsistentes, Erro ao logar!');
+            // alert('Dados do usuário inconsistentes, Erro ao logar!');
+            toast.error('Dados do usuário inconsistentes, Erro ao logar!', {
+                position: "top-right",
+                autoClose: 3500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
         }
 
         // console.log('userLogin: ' + Object.values(userLogin));
