@@ -5,13 +5,14 @@ import { Alert, Box } from '@mui/material';
 import Tema from '../../../models/Tema';
 import './ListaTema.css';
 import { busca } from '../../../services/Service';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 
 function ListaTema() {
     const [temas, setTemas] = useState<Tema[]>([])
     let navigate = useNavigate();
+    const dispatch = useDispatch();
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
@@ -56,8 +57,8 @@ function ListaTema() {
                     </Button>
                 </Link>
             </Box>
-            {
-                temas.map(tema => (
+            {temas.length === 0 ? (<div className="spinner"></div>) : (
+                temas.map((tema => (
                     <Box m={2} >
                         <Card variant="outlined">
                             <CardContent>
@@ -90,7 +91,7 @@ function ListaTema() {
                         </Card>
                     </Box>
                 ))
-            }
+                ))}
         </>
     );
 }

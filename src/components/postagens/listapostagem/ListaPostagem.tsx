@@ -6,30 +6,49 @@ import './ListaPostagem.css';
 import { busca } from '../../../services/Service';
 import Postagem from '../../../models/Postagem';
 import ModalPostagem from '../modalPostagem/ModalPostagem';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
+import { addToken } from '../../../store/tokens/actions';
+
 
 function ListaPostagem() {
 
     const [posts, setPosts] = useState<Postagem[]>([])
     let navigate = useNavigate();
+    const dispatch = useDispatch()
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
 
     useEffect(() => {
         if (token == '') {
-            alert("Você precisa estar logado")
+            toast.error('Usuário não autenticado!', {
+                position: 'top-right',
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: 'colored',
+                progress: undefined,
+            });
             navigate("/login")
         }
     }, [token])
 
     async function getPostagem() {
-        await busca("/postagens", setPosts, {
-            headers: {
-                'Authorization': token
+        try {
+            await busca("/postagens", setPosts, {
+                headers: {
+                    'Authorization': token
+                },
+            });
+        } catch (error: any) {
+            if (error.response?.status === 403) {
+                dispatch(addToken(''))
             }
-        })
+        }
     }
 
     useEffect(() => {
@@ -40,7 +59,8 @@ function ListaPostagem() {
 
     return (
         <>
-            <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
+
+            {/* <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
                 <Grid alignItems="center" item xs={12}>
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
@@ -48,9 +68,10 @@ function ListaPostagem() {
                         </Box>
                     </Box>
                 </Grid>
-            </Grid>
-            {
-                posts.map(post => (
+            </Grid> */}
+
+            {posts.length === 0 ? (<div className="spinner"></div>) : (
+                posts.map((post => (
                     <Box m={2} >
                         <Card variant="outlined" className='cardPostagem'>
                             <CardContent >
@@ -95,8 +116,9 @@ function ListaPostagem() {
                         </Card>
                     </Box>
                 ))
-            }
-        </>)
+                ))}
+        </>
+    );
 }
 
 export default ListaPostagem;
