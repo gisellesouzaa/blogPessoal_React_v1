@@ -25,7 +25,7 @@
 }
 
 body {
-  background: url(../src/images/bg_body.jpg) center 0 no-repeat var(--color-contrast-blue);
+  background: url(../src/images/bg_body.jpg) center 0  var(--color-contrast-blue);
 }
 
 a {
