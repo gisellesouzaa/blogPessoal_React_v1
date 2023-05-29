@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux';
 import { addToken } from '../../store/tokens/actions';
 import { toast } from 'react-toastify';
 
+
 function Login() {
 
     let history = useNavigate();
@@ -72,39 +73,15 @@ function Login() {
         // console.log('userLogin: ' + Object.values(userLogin));
     }
 
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const validarEmail = emailRegex.test(userLogin.usuario);
+
+    const usuarioError = !validarEmail && userLogin.usuario.length > 0
+    const senhaError = userLogin.senha.length > 0 && userLogin.senha.length < 8
+    const vazio = userLogin.usuario.length === 0 || userLogin.senha.length === 0
+
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
-            <Grid alignItems='center' xs={6}>
-                <Box paddingX={20} >
-                    {/* <form onSubmit={onSubmit}>
-
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos1'>
-                            Entrar
-                        </Typography>
-
-                        <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='usuario' label='usuário' variant='outlined' name='usuario' margin='normal' fullWidth />
-
-                        <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
-
-                        <Box marginTop={2} textAlign='center'>
-                            <Button type='submit' variant='contained' color='primary'>
-                                Logar
-                            </Button>
-                        </Box>
-                    </form> */}
-
-                    {/* <Box display='flex' justifyContent='center' marginTop={2}>
-                        <Box marginRight={1}>
-                            <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
-                        </Box>
-
-                        <Link to="/cadastro">
-                            <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Cadastre-se</Typography>
-                        </Link>
-
-                    </Box> */}
-                </Box>
-            </Grid>
 
             <Grid alignItems='center' xs={6} className='containerVideo'>
                 <video autoPlay muted loop id="myVideo">
@@ -112,27 +89,43 @@ function Login() {
                 </video>
                 <Box className="content">
 
-                        <Box mx={1} textAlign='center'>
-                            <img className="logo_principal" src="src\images\logo_vetor.png" alt="" />
-                        </Box>
+                    <Box mx={1} textAlign='center'>
+                        <img className="logo_principal" src="src\images\logo_vetor.png" alt="" />
+                    </Box>
                     <form onSubmit={onSubmit}>
 
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='tituloEntrar'>
-                            Entrar
+                        <Typography variant='subtitle1' gutterBottom color='textSecondary' component='h3' align='center' className='tituloEntrar'>
+                            Seja bem vindo!
                         </Typography>
 
                         <TextField
+                            error={usuarioError}
                             value={userLogin.usuario}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
-                            id='usuario' label='usuário' variant='outlined' name='usuario' margin='normal' fullWidth />
+                            id='usuario'
+                            label='usuário'
+                            variant='outlined'
+                            name='usuario'
+                            margin='normal'
+                            helperText={usuarioError ? 'Digite um e-mail válido!' : ''}
+                            fullWidth />
 
                         <TextField
+                            error={senhaError}
                             value={userLogin.senha}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
-                            id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
+                            id='senha'
+                            label='senha'
+                            variant='outlined'
+                            name='senha'
+                            margin='normal'
+                            type='password'
+                            fullWidth
+                            helperText={senhaError ? "A senha precisa ter no mínimo 8 caracteres" : ""}
+                        />
 
                         <Box marginTop={1} textAlign='center'>
-                            <Button type='submit' variant='contained' color='primary' fullWidth>
+                            <Button type='submit' variant='contained' color='primary' fullWidth                            >
                                 Logar
                             </Button>
                         </Box>
