@@ -1,3 +1,7 @@
-.titulo{
+.titulo {
     font-weight: bold;
- }
+}
+
+.sobre {
+    text-align: center !important;
+}
