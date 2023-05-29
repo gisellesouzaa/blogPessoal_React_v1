@@ -3,6 +3,8 @@
 }
 
 .btnModal {
-    border-color: white !important;
-    background-color: white !important;
+    padding: 5px;
+    font-weight: bold !important;
+    background-color: greenyellow !important;
+    margin: 50px !important;
 }

@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
 
 
 function Home() {
@@ -40,10 +41,18 @@ function Home() {
                     <Carrossel />
                 </Grid>
             </Grid>
+
+
+
             <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
                 <Grid item xs={12} className='postagens'>
                     <TabPostagem />
                 </Grid>
+            </Grid>
+
+            
+            <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
+                <ModalPostagem/>
             </Grid>
 
 

@@ -59,17 +59,13 @@ function ListaPostagem() {
 
     return (
         <>
-
-            {/* <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
-                <Grid alignItems="center" item xs={12}>
-                    <Box display="flex" justifyContent="center">
-                        <Box marginRight={1}>
-                            <ModalPostagem />
-                        </Box>
-                    </Box>
-                </Grid>
-            </Grid> */}
-
+            <Box m={2} justifyItems='center'>
+                <Link to="/formularioPostagem">
+                    <Button variant="contained" className="marginLeft" size='small' color="primary">
+                        Cadastrar uma nova postagem
+                    </Button>
+                </Link>
+            </Box>
             {posts.length === 0 ? (<div className="spinner"></div>) : (
                 posts.map((post => (
                     <Box m={2} >
