@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css'
-import { Box, Typography } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';

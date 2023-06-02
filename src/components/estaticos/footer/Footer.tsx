@@ -1,5 +1,5 @@
 import React from 'react';
-import GithubIcon from '@material-ui/icons/Github';
+import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import { Typography, Grid } from '@material-ui/core';
@@ -27,7 +27,7 @@ function Footer() {
                             <LinkedInIcon className='redes' />
                         </a>
                         <a href="https://github.com/gisellesouzaa" target="_blank">
-                            <GithubIcon className='redes' />
+                            <GitHubIcon className='redes' />
                         </a>
                         <a href="https://api.whatsapp.com/send?phone=5511999059579&text=Ol%C3%A1!%20Tudo%20bem%3F%20Vi%20seu%20portf%C3%B3lio" target="_blank">
                             <WhatsAppIcon className='redes' />
