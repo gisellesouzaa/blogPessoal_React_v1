@@ -8,8 +8,6 @@ function Galeria() {
         <>
             <Grid container rowSpacing={8} columnSpacing={{ xs: 1, sm: 2, md: 3 }} padding={8} justifyContent="center" alignItems="center">
 
-
-
                 <Grid className='border' item xs={6} alignItems={'center'} justifyContent={'center'}>
                     <Card sx={{ maxWidth: 560 }} >
                         <CardActionArea className='cardVideo'>
