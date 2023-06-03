@@ -71,9 +71,15 @@ function Navbar() {
                 </Box>
             </Link>
 
+            {/* <Link to="/perfil">
+                <Box className="itemMenu" mx={1} >
+                    <p>Perfil</p>
+                </Box>
+            </Link> */}
+
             <Box className="itemMenu" mx={1} onClick={goLogout}>
 
-            <p>Sair <LogoutIcon /></p>
+            <LogoutIcon />
                 
             </Box>
         </Box >

@@ -65,6 +65,12 @@ function ListaPostagem() {
                         Cadastrar uma nova postagem
                     </Button>
                 </Link>
+
+                <Link to="/postagensportitulo">
+                    <Button variant="contained" className="marginLeft" size='small' color="primary" style={{ marginLeft: '10px' }}>
+                        Pesquisar postagem por titulo
+                    </Button>
+                </Link>
             </Box>
             {posts.length === 0 ? (<div className="spinner"></div>) : (
                 posts.map((post => (

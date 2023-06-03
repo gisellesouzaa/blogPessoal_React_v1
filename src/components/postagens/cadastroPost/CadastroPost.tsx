@@ -32,8 +32,8 @@ function CadastroPost() {
                 progress: undefined,
             });
 
-                navigate("/login")
-            }
+            navigate("/login")
+        }
     }, [token])
 
     const [tema, setTema] = useState<Tema>(
@@ -173,8 +173,9 @@ function CadastroPost() {
                         }
                     </Select>
                     <FormHelperText>Escolha um tema para a postagem</FormHelperText>
-                    <Button type="submit" variant="contained" color="primary">
-                        Finalizar
+                    <Button type="submit" variant="contained" color="primary"
+                        disabled={postagem.titulo.length == 0 || postagem.texto.length == 0 || postagem.tema?.id == 0}>
+                        {postagem.id ? 'Atualizar' : 'Cadastrar'}
                     </Button>
                 </FormControl>
             </form>

@@ -5,3 +5,19 @@
 .border{
     /* border: 1px solid var(--color-red); */
 }
+
+.slidesGoogle{
+    text-align: center;
+    margin: 10px;
+
+}
+
+
+.tituloGaleria{
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1a0071 ;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}

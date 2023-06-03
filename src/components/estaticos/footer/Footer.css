@@ -16,5 +16,20 @@
 }
 
 .textos {
-    color: var(--color-areia)
+    color: #fff;
+}
+
+.gridFooter {
+    padding: 13px;
+    background-color: #ffffff9b;
+
+
+}
+
+.footer {
+    background-color: #06081b;
+}
+
+.textFooter {
+    font-size: 0.8rem !important;
 }

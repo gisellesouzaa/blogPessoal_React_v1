@@ -21,6 +21,9 @@ import store from './store/store';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ModalPostagem from './components/postagens/modalPostagem/ModalPostagem';
+import AtualizarUsuario from './components/usuarios/atualizarsuario/AtualizarUsuario';
+import ListaPostagemPorTitulo from './components/postagens/listapostagemportitulo/ListaPostagemPorTitulo';
+import Perfil from './paginas/perfil/Perfil';
 
 function App() {
   const THEME = createTheme({
@@ -44,7 +47,7 @@ function App() {
     <>
       <MuiThemeProvider theme={THEME}>
         <Provider store={store}>
-          <ToastContainer/>
+          <ToastContainer />
           <BrowserRouter>
             <Navbar />
             <Routes>
@@ -55,15 +58,20 @@ function App() {
               <Route path="/temas" element={<ListaTema />} />
               <Route path="/galeria" element={<Galeria />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/perfil" element={<Perfil />} />
+
               <Route path="/cadastro" element={<CadastroUsuario />} />
+              <Route path="/atualizarusuario" element={<AtualizarUsuario />} />
 
               <Route path="/formularioPostagem" element={<CadastroPost />} />
               <Route path="/formularioPostagem/:id" element={<CadastroPost />} />
               <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
+              <Route path="/postagensportitulo" element={<ListaPostagemPorTitulo />} />
 
               <Route path="/formularioTema" element={<CadastroTema />} />
               <Route path="/formularioTema/:id" element={<CadastroTema />} />
               <Route path="/deletarTema/:id" element={<DeletarTema />} />
+
 
             </Routes>
             <Footer />
