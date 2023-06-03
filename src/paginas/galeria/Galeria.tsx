@@ -11,7 +11,7 @@ function Galeria() {
 
 
             <Grid item xs={12} alignItems={'center'} justifyContent={'center'} className="slidesGoogle">
-                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTb3DDsKJZwORjGP0848OUbPDGdSHlKRoiTbVDUkufEss_wNXHtvEVpZgnBgIO2HeAXBhv-hFboj2ZX/embed?start=false&loop=false&delayms=5000" frameBorder="0" width="960" height="569" allowFullScreen="true" mozallowFullScreen="true" webkitallowFullScreen="true"></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4yWgTTMjggQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </Grid>
 
             <h2 className='tituloGaleria'>Videos:</h2>
