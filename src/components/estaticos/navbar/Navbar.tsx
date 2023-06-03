@@ -56,7 +56,7 @@ function Navbar() {
             </Link>
 
             <Box mx={1} >
-                <img className="logo_principal" src="src\images\logo_vetor.png" alt="" />
+                <img className="logo_principal" src="https://i.imgur.com/A0ydT59.png" alt="logo" referrerPolicy="no-referrer" />
             </Box>
 
             <Link to="/posts">
