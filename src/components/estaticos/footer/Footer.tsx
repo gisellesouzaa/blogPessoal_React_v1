@@ -52,7 +52,7 @@ function Footer() {
                 <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center">
                     <Typography variant="h6" align="center">Objetivo do projeto</Typography>
                     <Typography align="center" gutterBottom className="textFooter">
-Projeto desenvolvido durante o Bootcamp Desenvolvedor Fullstack da Generation Brasil para como parte da avaliação do conteúdo aprendido.</Typography>
+Projeto desenvolvido durante o Bootcamp Desenvolvedor Fullstack da Generation Brasil como parte da avaliação do conteúdo aprendido.</Typography>
                 </Box>
             </Grid>
             <Grid item xs={4}>
